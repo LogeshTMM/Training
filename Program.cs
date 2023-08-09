@@ -2,26 +2,27 @@
 
 static void NewMethod () {
    Console.WriteLine ("Enter your name");
-   string uname = Console.ReadLine ();
+   string name = Console.ReadLine ();
 
-   Console.WriteLine ("\nEnter your lucky number");
+   Console.WriteLine ("\nEnter your number");
    Random rnd = new ();
-   int num = rnd.Next (0, 100);
-   //Console.WriteLine ("\nMatching result between your lucky number and computer generated number");// Guess the computer generated number
+   int rnd_num = rnd.Next (0, 100);
+   
    int j = 6;
    for (int i = 0; i <= j; i++) {
       
-      int unum = Convert.ToInt32 (Console.ReadLine ());
+      int user_num = Convert.ToInt32 (Console.ReadLine ());
 
-      if (num == unum)
-         Console.WriteLine ($"Your are a genius {uname}","\n");
-   
-      else if (num < unum)
-         Console.WriteLine ($"your guess is high, Try again you have {j-i} chances left","\n");
-      else
-         Console.WriteLine ($"your guess is low, Try again you have {j-i} chances left","\n");
-
+      if (rnd_num == user_num)
+         Console.WriteLine ($"Your are a genius {name}", "\n");
+      
+      else if (rnd_num < user_num)
+         Console.WriteLine ($"your guess is high, Try again you have {j - i} chances left", "\n");
+      else 
+         Console.WriteLine ($"your guess is low, Try again you have {j - i} chances left", "\n");
+              
    }
+   Console.WriteLine ("\nGame Over");
 
-   //Console.WriteLine ("\nCorrect answer is  " + num);
+   Console.WriteLine ("\nCorrect answer is  " + rnd_num);
 }
