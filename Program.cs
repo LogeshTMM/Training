@@ -1,4 +1,4 @@
-﻿//Convert THE  GIVEN DECIMAL NUMBER TO BASE VALUE OF 16,8 AND 2
+﻿//Convert THE  GIVEN DECIMAL NUMBER INTO BASE VALUE OF 16,8 AND 2
 internal class Program {
       static void Main (string[] args) {
          Console.WriteLine ("Enter the decimal number ");
